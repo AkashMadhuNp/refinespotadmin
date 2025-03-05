@@ -1,4 +1,3 @@
-// lib/services/service_manager.dart
 
 import 'dart:convert';
 import 'dart:io';
@@ -13,7 +12,7 @@ class ServiceManager {
       FirebaseFirestore.instance.collection('services');
   final ImagePicker _picker = ImagePicker();
 
-  // Image Handling Methods
+
   Future<bool> requestPermissions() async {
     if (!Platform.isAndroid) return true;
     
@@ -64,7 +63,7 @@ class ServiceManager {
     }
   }
 
-  // Firebase Methods
+  
   Stream<List<Service>> getServices() {
     return _servicesCollection
         .orderBy('createdAt', descending: true)

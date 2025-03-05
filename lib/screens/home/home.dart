@@ -12,7 +12,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea( // Wrap Scaffold with SafeArea
+    return SafeArea( 
       child: Scaffold(
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(80),

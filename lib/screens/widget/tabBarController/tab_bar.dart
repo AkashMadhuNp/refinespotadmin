@@ -1,7 +1,7 @@
 import 'package:admin_sec_pro/constant/colors.dart';
-import 'package:admin_sec_pro/screens/approvedScreen/approved_screen.dart';
-import 'package:admin_sec_pro/screens/pendingScreen/pending_screen.dart';
-import 'package:admin_sec_pro/screens/rejectedScreen/rejected_Screen.dart';
+import 'package:admin_sec_pro/screens/approved/approvedScreen/approved_screen.dart';
+import 'package:admin_sec_pro/screens/pending/pendingScreen/pending_screen.dart';
+import 'package:admin_sec_pro/screens/rejected/rejectedScreen/rejected_screen.dart';
 import 'package:flutter/material.dart';
 
 class TabBarController extends StatelessWidget {
@@ -16,28 +16,28 @@ class TabBarController extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              color:Colors.blue.shade100, // Background color of the TabBar
+              color:Colors.blue.shade100, 
               child: TabBar(
                 indicator: BoxDecoration(
-                  color:AppColor.Cblue, // Selected tab background color
-                  borderRadius: BorderRadius.circular(8), // Optional: rounded corners
+                  color:AppColor.Cblue, 
+                  borderRadius: BorderRadius.circular(8),
                 ),
-                labelColor: Colors.white, // Selected text color
-                unselectedLabelColor: Colors.black, // Unselected text color
-                indicatorSize: TabBarIndicatorSize.tab  , // Makes indicator match tab size
+                labelColor: Colors.white,
+                unselectedLabelColor: Colors.black, 
+                indicatorSize: TabBarIndicatorSize.tab  , 
                 tabs: const [
                   Tab(text: "Pending"),
-                  Tab(text: "Accepted"),
+                  Tab(text: "Approved"),
                   Tab(text: "Rejected"),
                 ],
               ),
             ),
-           const Expanded(
+           Expanded(
               child: TabBarView(
                 children: [
                   PendingScreen(),
-                  ApprovedScreen(),
-                  RejectedScreen(),
+                   ApprovedScreen(),
+                   RejectedScreen(),
                 ],
               ),
             ),
